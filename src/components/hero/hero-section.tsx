@@ -1,4 +1,4 @@
-import { Rocket } from 'lucide-react';
+import { ChevronDown, Rocket } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Button } from '../ui/button';
 import { HeroVideoDialog } from '../ui/hero-video-dialog';
@@ -68,14 +68,14 @@ export const HeroSection = () => {
 
         <motion.h3
           variants={item}
-          className="text-4xl lg:text-5xl text-center font-semibold"
+          className="text-4xl dark:text-shadow-sm dark:text-shadow-white/20 lg:text-5xl text-center font-semibold"
         >
           Somos a neverdevup
         </motion.h3>
 
         <motion.p
           variants={item}
-          className="max-w-[800px] hidden lg:block lg:text-xl mt-4 text-center text-zinc-500"
+          className="max-w-[800px] hidden dark:text-zinc-300 lg:block lg:text-xl mt-4 text-center text-zinc-500"
         >
           Somos uma empresa de desenvolvimento de software que ajuda negócios a
           transformar ideias em soluções digitais eficientes. Trabalhamos com
@@ -85,7 +85,7 @@ export const HeroSection = () => {
 
         <motion.p
           variants={item}
-          className="max-w-[300px] block lg:hidden text-sm text-center text-zinc-500"
+          className="max-w-[300px] block  dark:text-zinc-300  lg:hidden text-sm text-center text-zinc-500"
         >
           Somos uma empresa de desenvolvimento de software que ajuda negócios a
           transformar ideias em soluções digitais eficientes.
@@ -93,7 +93,7 @@ export const HeroSection = () => {
 
         <motion.div variants={item}>
           <HeroVideoDialog
-            className="block mt-2 dark:hidden"
+            className="block mt-2 "
             animationStyle="from-center"
             videoSrc="https://www.youtube.com/embed/Ne-YYlb2faM?si=aKQNUTaIaL_C7MLj"
             thumbnailSrc="/image-1.png"
@@ -110,14 +110,21 @@ export const HeroSection = () => {
             size="lg"
             className="w-full lg:w-auto lg:min-w-[180px] text-base font-medium border-2 hover:bg-zinc-50 bg-transparent"
           >
-            Saiba Mais
+            Saiba Mais <ChevronDown />
           </Button>
 
           <Button
+            asChild
             size="lg"
             className="w-full lg:w-auto lg:min-w-[180px] text-base font-medium bg-[#FF8C00] hover:bg-orange-600 shadow-lg shadow-orange-500/25"
           >
-            Começar Projeto
+            <a
+              href="https://wa.me/558592248448?text=ol%C3%A1%20gostaria%20de%20realizar%20um%20or%C3%A7amento%20para%20um%20projeto!"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Começar Projeto
+            </a>
           </Button>
         </motion.div>
       </motion.section>

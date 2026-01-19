@@ -35,7 +35,10 @@ export const Steps = () => {
   };
 
   return (
-    <div className="bg-orange-50/25 w-full py-12 gap-2 inset-shadow-sm flex flex-col items-center justify-center">
+    <div
+      id="sobre"
+      className="bg-orange-50/25 dark:bg-zinc-700/25 w-full py-12 gap-2 inset-shadow-sm flex flex-col items-center justify-center"
+    >
       <span className="text-sm text-center lg:text-base font-semibold tracking-wide uppercase bg-gradient-to-r from-orange-400 via-[#FF8C00] to-orange-600 bg-clip-text text-transparent">
         Da Ideia à Entrega
       </span>
@@ -53,47 +56,47 @@ export const Steps = () => {
       >
         <motion.div
           variants={card}
-          className="w-full flex rounded-md shadow-sm p-8 bg-white"
+          className="w-full flex rounded-md dark:bg-zinc-700 shadow-sm p-8 bg-white"
         >
           <main className="flex flex-col gap-4">
             <h2 className="text-7xl font-medium text-orange-200">01</h2>
             <h3 className="font-medium text-3xl">Contato</h3>
-            <p className="text-zinc-500 max-w-[200px] font-medium">
+            <p className="text-zinc-500 dark:text-zinc-200 max-w-[200px] font-medium">
               Atendimento inicial{' '}
               <span className="text-[#FF8C00]">acolhedor</span> e profissional.
             </p>
           </main>
-          <ChevronsRight className="size-12 text-zinc-500" />
+          <ChevronsRight className="size-12 text-zinc-500 dark:text-zinc-200" />
         </motion.div>
 
         <motion.div
           variants={card}
-          className="w-full flex rounded-md shadow-sm p-8 bg-white"
+          className="w-full flex rounded-md dark:bg-zinc-700 shadow-sm p-8 bg-white"
         >
           <main className="flex flex-col gap-4">
             <h2 className="text-7xl font-medium text-orange-200">02</h2>
             <h3 className="font-medium text-3xl">Alinhamento</h3>
-            <p className="text-zinc-500 max-w-[200px] font-medium">
+            <p className="text-zinc-500 dark:text-zinc-200 max-w-[200px] font-medium">
               Mapeamento do que o{' '}
               <span className="text-[#FF8C00]">cliente</span> deseja alcançar.
             </p>
           </main>
-          <ChevronsRight className="size-12 text-zinc-500" />
+          <ChevronsRight className="size-12 text-zinc-500 dark:text-zinc-200" />
         </motion.div>
 
         <motion.div
           variants={card}
-          className="w-full flex rounded-md shadow-sm p-8 bg-white"
+          className="w-full flex rounded-md dark:bg-zinc-700 shadow-sm p-8 bg-white"
         >
           <main className="flex flex-col gap-4">
             <h2 className="text-7xl font-medium text-orange-200">03</h2>
             <h3 className="font-medium text-3xl">Start</h3>
-            <p className="text-zinc-500 max-w-[200px] font-medium">
+            <p className="text-zinc-500 dark:text-zinc-200 max-w-[200px] font-medium">
               Início oficial do{' '}
               <span className="text-[#FF8C00]">desenvolvimento</span>.
             </p>
           </main>
-          <ChevronsRight className="size-12 text-zinc-500" />
+          <ChevronsRight className="size-12 text-zinc-500 dark:text-zinc-200" />
         </motion.div>
       </motion.section>
     </div>

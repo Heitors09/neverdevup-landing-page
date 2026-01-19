@@ -1,10 +1,15 @@
-import { Moon } from "lucide-react";
-import { Button } from "../ui/button";
+import { Moon, Sun } from 'lucide-react';
+import { Button } from '../ui/button';
+import { useTheme } from './theme-provider';
 
 export const ThemeToggle = () => {
-	return (
-		<Button variant={"outline"}>
-			<Moon size={18} />
-		</Button>
-	);
+  const { setTheme, theme } = useTheme();
+  return (
+    <Button
+      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      variant={'outline'}
+    >
+      {theme === 'light' ? <Moon /> : <Sun />}
+    </Button>
+  );
 };

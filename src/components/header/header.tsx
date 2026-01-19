@@ -41,19 +41,19 @@ export const Header = () => {
       </motion.div>
 
       <motion.ul
-        className="flex text-zinc-500  hidden lg:flex  gap-[34px]"
+        className="flex text-zinc-500 dark:text-zinc-200  hidden lg:flex  gap-[34px]"
         variants={itemVariants}
       >
-        <li className="hover:text-black duration-200">
-          <a href="#">sobre</a>
+        <li className="hover:text-black dark:hover:text-zinc-400 duration-200">
+          <a href="#sobre">sobre</a>
         </li>
-        <li className="hover:text-black duration-200">
+        <li className="hover:text-black dark:hover:text-zinc-400 duration-200">
           <a href="#">descubra</a>
         </li>
-        <li className="hover:text-black duration-200">
-          <a href="#">contato</a>
+        <li className="hover:text-black dark:hover:text-zinc-400 duration-200">
+          <a href="#contato">contato</a>
         </li>
-        <li className="hover:text-black duration-200">
+        <li className="hover:text-black dark:hover:text-zinc-400 duration-200">
           <a href="#">produtos</a>
         </li>
       </motion.ul>
@@ -65,7 +65,16 @@ export const Header = () => {
 
       <motion.div className=" hidden lg:flex gap-2" variants={itemVariants}>
         <ThemeToggle />
-        <Button className="shadow-lg shadow-orange-500/25">Orçamento</Button>
+        <Button asChild>
+          <a
+            href="https://wa.me/558592248448?text=ol%C3%A1%20gostaria%20de%20realizar%20um%20or%C3%A7amento%20para%20um%20projeto!"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shadow-lg shadow-orange-500/25"
+          >
+            Orçamento
+          </a>
+        </Button>
       </motion.div>
     </motion.header>
   );
