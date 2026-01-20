@@ -34,7 +34,7 @@ export const HeroSection = () => {
         initial={{ x: -50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className="w-full px-4 bg-gradient-to-r from-orange-500 via-[#FF8C00] to-orange-500 py-3.5 lg:py-4"
+        className="w-full px-4 bg-gradient-to-r from-blue-700 via-blue-500 to-blue-700 py-3.5 lg:py-4"
       >
         <div className="max-w-7xl uppercase mx-auto">
           <ScrollVelocityRow className="text-white  flex justify-center gap-2 items-center text-center text-sm lg:text-base font-medium">
@@ -61,7 +61,7 @@ export const HeroSection = () => {
       >
         <motion.span
           variants={item}
-          className="text-sm lg:text-base font-semibold tracking-wide uppercase bg-gradient-to-r from-orange-400 via-[#FF8C00] to-orange-600 bg-clip-text text-transparent"
+          className="text-sm lg:text-base font-semibold tracking-wide uppercase bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400  bg-clip-text text-transparent"
         >
           Bem-vindo
         </motion.span>
@@ -116,7 +116,7 @@ export const HeroSection = () => {
           <Button
             asChild
             size="lg"
-            className="w-full lg:w-auto lg:min-w-[180px] text-base font-medium bg-[#FF8C00] hover:bg-orange-600 shadow-lg shadow-orange-500/25"
+            className="w-full lg:w-auto lg:min-w-[180px] text-base font-medium bg-[#2563EB] hover:bg-blue-600 shadow-lg shadow-blue-500/25"
           >
             <a
               href="https://wa.me/558592248448?text=ol%C3%A1%20gostaria%20de%20realizar%20um%20or%C3%A7amento%20para%20um%20projeto!"

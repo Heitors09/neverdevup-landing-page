@@ -70,7 +70,7 @@ export const Header = () => {
             href="https://wa.me/558592248448?text=ol%C3%A1%20gostaria%20de%20realizar%20um%20or%C3%A7amento%20para%20um%20projeto!"
             target="_blank"
             rel="noopener noreferrer"
-            className="shadow-lg shadow-orange-500/25"
+            className="shadow-lg shadow-blue-500/25"
           >
             Orçamento
           </a>

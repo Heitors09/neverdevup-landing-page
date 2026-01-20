@@ -1,5 +1,5 @@
 import './App.css';
-import { Contact } from './components/contact/contact';
+import { ContactSection } from './components/contact/contact';
 import { Header } from './components/header/header';
 import { HeroSection } from './components/hero/hero-section';
 import { ImpactsSection } from './components/impacts/impacts-section';
@@ -14,7 +14,7 @@ function App() {
         <HeroSection />
         <ImpactsSection />
         <Steps />
-        <Contact />
+        <ContactSection />
       </main>
     </ThemeProvider>
   );

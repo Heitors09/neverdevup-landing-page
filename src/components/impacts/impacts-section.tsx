@@ -2,8 +2,8 @@ import { Bot, Rabbit, Rocket, Shield, TrendingUp, Zap } from 'lucide-react';
 
 export const ImpactsSection = () => {
   return (
-    <div className="w-full gap-2 flex py-12 flex-col ">
-      <span className="text-sm  text-center lg:text-base font-semibold tracking-wide uppercase bg-gradient-to-r from-orange-400 via-[#FF8C00] to-orange-600 bg-clip-text text-transparent">
+    <div className="w-full gap-2 inset-shadow-sm bg-zinc-50/25 dark:bg-zinc-700/25 flex py-12 flex-col ">
+      <span className="text-sm  text-center lg:text-base font-semibold tracking-wide uppercase bg-gradient-to-r  from-blue-600 via-blue-500 to-blue-400 bg-clip-text text-transparent">
         Por que investir conosco
       </span>
 
@@ -13,10 +13,10 @@ export const ImpactsSection = () => {
       <div className="w-full lg:px-[417px] px-6 flex flex-col gap-12 lg:gap-26 py-12">
         <div className=" w-full flex max-lg:flex-col max-lg:gap-6 justify-between">
           <main className="flex flex-col gap-3">
-            <div className=" size-10 ring-1 ring-[#FF8C00] rounded-md shadow-md shadow-orange-500/25 flex items-center justify-center">
-              <Rocket className=" text-[#FF8C00] size-7" />
+            <div className=" size-10 ring-1 ring-blue-500 rounded-md shadow-md shadow-blue-500/25 flex items-center justify-center">
+              <Rocket className=" text-blue-500 size-7" />
             </div>
-            <span className="text-[#FF8C00] max-lg:text-sm font-medium uppercase">
+            <span className="text-blue-500 max-lg:text-sm font-medium uppercase">
               Acelere seu crescimento
             </span>
             <h3 className=" text-2xl lg:text-4xl  font-semibold">
@@ -30,11 +30,11 @@ export const ImpactsSection = () => {
           </main>
           <aside>
             <div className="relative w-80 lg:w-[450px] h-64">
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-orange-500/10 rounded-2xl border border-orange-500/20 backdrop-blur-sm">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-blue-500/10 rounded-2xl border border-blue-500/20 backdrop-blur-sm">
                 <div className="p-6 h-full flex flex-col">
                   <div className="flex items-center gap-2 mb-4">
-                    <div className="w-3 h-3 rounded-full bg-orange-400" />
-                    <span className="text-orange-400 text-sm font-medium">
+                    <div className="w-3 h-3 rounded-full bg-blue-400" />
+                    <span className="text-blue-400 text-sm font-medium">
                       Crescimento
                     </span>
                   </div>
@@ -42,7 +42,7 @@ export const ImpactsSection = () => {
                     {[40, 55, 45, 65, 80, 70, 95].map((h, i) => (
                       <div
                         key={i}
-                        className="flex-1 bg-gradient-to-t from-orange-500 to-orange-400 rounded-t-md opacity-80"
+                        className="flex-1 bg-gradient-to-t from-blue-500 to-blue-400 rounded-t-md opacity-80"
                         style={{ height: `${h}%` }}
                       />
                     ))}
@@ -53,7 +53,7 @@ export const ImpactsSection = () => {
                   </div>
                 </div>
               </div>
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-300 rounded-xl flex items-center justify-center shadow-lg shadow-orange-500/20">
+              <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-300 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/20">
                 <TrendingUp className="w-8 h-8 text-white" />
               </div>
             </div>
@@ -61,10 +61,10 @@ export const ImpactsSection = () => {
         </div>
         <div className=" w-full flex max-lg:flex-col lg:flex-row-reverse gap-16">
           <main className="flex flex-col gap-3">
-            <div className=" size-10 ring-1 ring-[#FF8C00] rounded-md shadow-md shadow-orange-500/25 flex items-center justify-center">
-              <Bot className=" text-[#FF8C00] size-7" />
+            <div className=" size-10 ring-1 ring-blue-500 rounded-md shadow-md shadow-blue-500/25 flex items-center justify-center">
+              <Bot className=" text-blue-500 size-7" />
             </div>
-            <span className="text-[#FF8C00] max-lg:text-sm  font-medium uppercase">
+            <span className="text-blue-500 max-lg:text-sm  font-medium uppercase">
               Eficiência operacional
             </span>
             <h3 className="text-2xl lg:text-4xl  font-semibold">
@@ -78,7 +78,7 @@ export const ImpactsSection = () => {
           </main>
           <aside>
             <div key="automation" className="relative w-80 lg:w-[450px] h-64">
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-orange-300/10 rounded-2xl border border-orange-500/20 backdrop-blur-sm p-6">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-blue-300/10 rounded-2xl border border-blue-500/20 backdrop-blur-sm p-6">
                 <div className="space-y-4">
                   {[
                     'Entrada de Dados',
@@ -90,8 +90,8 @@ export const ImpactsSection = () => {
                       <div
                         className={`w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold ${
                           i === 3
-                            ? 'bg-orange-500 text-[#0a0a0f]'
-                            : 'bg-orange-500/20 text-orange-400 border border-orange-500/30'
+                            ? 'bg-blue-500 text-[#0a0a0f]'
+                            : 'bg-blue-500/20 text-blue-400 border border-blue-500/30'
                         }`}
                       >
                         {i + 1}
@@ -99,7 +99,7 @@ export const ImpactsSection = () => {
                       <div className="flex-1 h-2 bg-zinc-800 rounded-full overflow-hidden">
                         <div
                           className={`h-full rounded-full transition-all ${
-                            i === 3 ? 'bg-orange-500' : 'bg-orange-200'
+                            i === 3 ? 'bg-blue-500' : 'bg-blue-200'
                           }`}
                           style={{ width: `${(i + 1) * 25}%` }}
                         />
@@ -109,7 +109,7 @@ export const ImpactsSection = () => {
                   ))}
                 </div>
               </div>
-              <div className="absolute -bottom-4 -left-4 w-14 h-14 bg-gradient-to-br from-orange-400 to-orange-300 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/20">
+              <div className="absolute -bottom-4 -left-4 w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-300 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/20">
                 <Zap className="w-7 h-7 text-white" />
               </div>
             </div>
@@ -118,10 +118,10 @@ export const ImpactsSection = () => {
         </div>
         <div className=" w-full flex max-lg:flex-col max-lg:gap-6 justify-between">
           <main className="flex flex-col gap-3">
-            <div className=" size-10 ring-1 ring-[#FF8C00] rounded-md shadow-md shadow-orange-500/25 flex items-center justify-center">
-              <Shield className=" text-[#FF8C00] size-7" />
+            <div className=" size-10 ring-1 ring-blue-500 rounded-md shadow-md shadow-blue-500/25 flex items-center justify-center">
+              <Shield className=" text-blue-500 size-7" />
             </div>
-            <span className="text-[#FF8C00] max-lg:text-sm font-medium uppercase">
+            <span className="text-blue-500 max-lg:text-sm font-medium uppercase">
               Segurança e confiabilidade
             </span>
             <h3 className=" text-2xl lg:text-4xl  font-semibold">
@@ -135,7 +135,7 @@ export const ImpactsSection = () => {
           </main>
           <aside>
             <div key="quality" className="relative w-80  lg:w-[450px] h-64">
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-orange-500/10 rounded-2xl border border-orange-500/20 backdrop-blur-sm">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-blue-500/10 rounded-2xl border border-blue-500/20 backdrop-blur-sm">
                 <div className="p-4 font-mono text-sm">
                   <div className="flex items-center gap-2 mb-3 pb-2 border-b border-zinc-800">
                     <div className="w-3 h-3 rounded-full bg-red-500/60" />
@@ -176,7 +176,7 @@ export const ImpactsSection = () => {
                   </div>
                 </div>
               </div>
-              <div className="absolute -top-4 -left-4 w-14 h-14 bg-gradient-to-br from-orange-400 to-orange-300 rounded-xl flex items-center justify-center shadow-lg shadow-orange-500/20">
+              <div className="absolute -top-4 -left-4 w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-300 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/20">
                 <Shield className="w-7 h-7 text-white" />
               </div>
             </div>
@@ -184,10 +184,10 @@ export const ImpactsSection = () => {
         </div>
         <div className=" w-full flex max-lg:flex-col lg:flex-row-reverse gap-16">
           <main className="flex flex-col gap-3">
-            <div className=" size-10 ring-1 ring-[#FF8C00] rounded-md shadow-md shadow-orange-500/25 flex items-center justify-center">
-              <Rabbit className=" text-[#FF8C00] size-7" />
+            <div className=" size-10 ring-1 ring-blue-500 rounded-md shadow-md shadow-blue-500/25 flex items-center justify-center">
+              <Rabbit className=" text-blue-500 size-7" />
             </div>
-            <span className="text-[#FF8C00] max-lg:text-sm  font-medium uppercase">
+            <span className="text-blue-500 max-lg:text-sm  font-medium uppercase">
               Time-to-market acelerado
             </span>
             <h3 className="text-2xl lg:text-4xl  font-semibold">
@@ -201,10 +201,10 @@ export const ImpactsSection = () => {
           </main>
           <aside>
             <div className="relative w-80 lg:w-[450px] h-64">
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-orange-400/10 rounded-2xl border border-orange-500/20 backdrop-blur-sm p-6">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-blue-400/10 rounded-2xl border border-blue-500/20 backdrop-blur-sm p-6">
                 <div className="flex items-center gap-2 mb-6">
-                  <Rocket className="w-5 h-5 text-orange-400" />
-                  <span className="text-orange-400 text-sm font-medium">
+                  <Rocket className="w-5 h-5 text-blue-400" />
+                  <span className="text-blue-400 text-sm font-medium">
                     Pipeline de Deploy
                   </span>
                 </div>
@@ -219,8 +219,8 @@ export const ImpactsSection = () => {
                       <div
                         className={`w-6 h-6 rounded-full flex items-center justify-center ${
                           item.status === 'done'
-                            ? 'bg-orange-500 text-white'
-                            : 'bg-orange-400 text-white animate-pulse'
+                            ? 'bg-blue-500 text-white'
+                            : 'bg-blue-400 text-white animate-pulse'
                         }`}
                       >
                         {item.status === 'done' ? '✓' : '●'}
@@ -228,14 +228,14 @@ export const ImpactsSection = () => {
                       <span
                         className={`text-sm ${
                           item.status === 'active'
-                            ? 'text-orange-400 font-medium'
+                            ? 'text-blue-400 font-medium'
                             : 'text-zinc-400'
                         }`}
                       >
                         {item.label}
                       </span>
                       {item.status === 'active' && (
-                        <span className="ml-auto text-xs text-orange-400 bg-orange-500/20 px-2 py-1 rounded-full">
+                        <span className="ml-auto text-xs text-blue-400 bg-blue-500/20 px-2 py-1 rounded-full">
                           Em progresso
                         </span>
                       )}
@@ -243,7 +243,7 @@ export const ImpactsSection = () => {
                   ))}
                 </div>
               </div>
-              <div className="absolute -bottom-4 -right-4 w-14 h-14 bg-gradient-to-br from-orange-400 to-orange-300 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/20">
+              <div className="absolute -bottom-4 -right-4 w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-300 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/20">
                 <Rocket className="w-7 h-7 text-white" />
               </div>
             </div>
