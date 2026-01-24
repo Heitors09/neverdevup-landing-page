@@ -1,253 +1,166 @@
-import { Bot, Rabbit, Rocket, Shield, TrendingUp, Zap } from 'lucide-react';
+import { Bot, Rabbit, Rocket, Shield } from 'lucide-react';
 
 export const ImpactsSection = () => {
   return (
-    <div className="w-full gap-2 inset-shadow-sm bg-zinc-50/25 dark:bg-zinc-700/25 flex py-12 flex-col ">
-      <span className="text-sm  text-center lg:text-base font-semibold tracking-wide uppercase bg-gradient-to-r  from-blue-600 via-blue-500 to-blue-400 bg-clip-text text-transparent">
-        Por que investir conosco
-      </span>
+    <div className="w-full relative overflow-hidden border-t border-zinc-200 dark:border-zinc-800">
+      {/* Textura de fundo sutil */}
+      <div
+        className="absolute inset-0 opacity-[0.02] dark:opacity-[0.03]"
+        style={{
+          backgroundImage:
+            'radial-gradient(circle, currentColor 1px, transparent 1px)',
+          backgroundSize: '40px 40px',
+        }}
+      />
 
-      <h3 className="text-4xl lg:text-5xl text-center font-semibold">
-        Qualidade, Estratégia e Resultados Reais
-      </h3>
-      <div className="w-full lg:px-[417px] px-6 flex flex-col gap-12 lg:gap-26 py-12">
-        <div className=" w-full flex max-lg:flex-col max-lg:gap-6 justify-between">
-          <main className="flex flex-col gap-3">
-            <div className=" size-10 ring-1 ring-blue-500 rounded-md shadow-md shadow-blue-500/25 flex items-center justify-center">
-              <Rocket className=" text-blue-500 size-7" />
-            </div>
-            <span className="text-blue-500 max-lg:text-sm font-medium uppercase">
-              Acelere seu crescimento
-            </span>
-            <h3 className=" text-2xl lg:text-4xl  font-semibold">
-              Software Que Impulsiona Resultados
-            </h3>
-            <p className="max-w-[450px] dark:text-zinc-300 text-zinc-500">
-              Transformamos suas ideias em soluções digitais que geram valor
-              real. Cada projeto é desenvolvido para escalar junto com seu
-              negócio e entregar ROI mensurável.
-            </p>
-          </main>
-          <aside>
-            <div className="relative w-80 lg:w-[450px] h-64">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-blue-500/10 rounded-2xl border border-blue-500/20 backdrop-blur-sm">
-                <div className="p-6 h-full flex flex-col">
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="w-3 h-3 rounded-full bg-blue-400" />
-                    <span className="text-blue-400 text-sm font-medium">
-                      Crescimento
-                    </span>
-                  </div>
-                  <div className="flex-1 flex items-end gap-2 pb-4">
-                    {[40, 55, 45, 65, 80, 70, 95].map((h, i) => (
-                      <div
-                        key={i}
-                        className="flex-1 bg-gradient-to-t from-blue-500 to-blue-400 rounded-t-md opacity-80"
-                        style={{ height: `${h}%` }}
-                      />
-                    ))}
-                  </div>
-                  <div className="flex justify-between text-xs text-zinc-500 dark:text-zinc-300">
-                    <span>Jan</span>
-                    <span>Jul</span>
-                  </div>
-                </div>
-              </div>
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-300 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/20">
-                <TrendingUp className="w-8 h-8 text-white" />
-              </div>
-            </div>
-          </aside>
+      <div className="relative bg-zinc-100/50 dark:bg-zinc-700/25 py-16 lg:py-24">
+        {/* Header */}
+        <div className="max-w-4xl mx-auto px-6 text-center mb-16">
+          <span className="text-sm lg:text-base tracking-wide uppercase text-zinc-600 dark:text-zinc-400 mb-4 block">
+            Por que investir conosco
+          </span>
+
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-zinc-900 dark:text-white">
+            Qualidade, Estratégia e Resultados Reais
+          </h2>
+
+          <p className="hidden lg:block text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
+            Desenvolvemos soluções digitais sob medida para empresas que querem
+            escalar. Do conceito ao deploy, com qualidade e velocidade.
+          </p>
         </div>
-        <div className=" w-full flex max-lg:flex-col lg:flex-row-reverse gap-16">
-          <main className="flex flex-col gap-3">
-            <div className=" size-10 ring-1 ring-blue-500 rounded-md shadow-md shadow-blue-500/25 flex items-center justify-center">
-              <Bot className=" text-blue-500 size-7" />
-            </div>
-            <span className="text-blue-500 max-lg:text-sm  font-medium uppercase">
-              Eficiência operacional
-            </span>
-            <h3 className="text-2xl lg:text-4xl  font-semibold">
-              Automatize e Otimize Processos
-            </h3>
-            <p className="max-w-[450px] dark:text-zinc-300 text-zinc-500">
-              Elimine tarefas manuais e reduza custos operacionais. Nossos
-              sistemas são projetados para integrar com sua operação e aumentar
-              a produtividade da sua equipe.
-            </p>
-          </main>
-          <aside>
-            <div key="automation" className="relative w-80 lg:w-[450px] h-64">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-blue-300/10 rounded-2xl border border-blue-500/20 backdrop-blur-sm p-6">
-                <div className="space-y-4">
-                  {[
-                    'Entrada de Dados',
-                    'Processamento',
-                    'Automação',
-                    'Resultado',
-                  ].map((step, i) => (
-                    <div key={i} className="flex items-center gap-3">
-                      <div
-                        className={`w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold ${
-                          i === 3
-                            ? 'bg-blue-500 text-[#0a0a0f]'
-                            : 'bg-blue-500/20 text-blue-400 border border-blue-500/30'
-                        }`}
-                      >
-                        {i + 1}
-                      </div>
-                      <div className="flex-1 h-2 bg-zinc-800 rounded-full overflow-hidden">
-                        <div
-                          className={`h-full rounded-full transition-all ${
-                            i === 3 ? 'bg-blue-500' : 'bg-blue-200'
-                          }`}
-                          style={{ width: `${(i + 1) * 25}%` }}
-                        />
-                      </div>
-                      <span className="text-gray-400 text-xs w-24">{step}</span>
-                    </div>
-                  ))}
+
+        {/* Timeline */}
+        <div className="max-w-5xl mx-auto px-6 lg:px-12">
+          <div className="relative">
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500/20 via-blue-500/20 to-blue-500/20" />
+
+            {/* Timeline Items */}
+            <div className="space-y-16 lg:space-y-24">
+              {/* Item 1 - Direita no desktop */}
+              <div className="relative flex flex-col lg:flex-row lg:items-center gap-6">
+                {/* Espaçador esquerdo - desktop */}
+                <div className="hidden lg:block lg:w-1/2" />
+
+                {/* Ponto na timeline - desktop */}
+                <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 w-16 h-16 bg-white dark:bg-zinc-900 rounded-full border-4 border-blue-500 items-center justify-center shadow-lg shadow-blue-500/25 z-10">
+                  <Rocket className="text-blue-500 size-7" />
                 </div>
-              </div>
-              <div className="absolute -bottom-4 -left-4 w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-300 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/20">
-                <Zap className="w-7 h-7 text-white" />
-              </div>
-            </div>
-            ,
-          </aside>
-        </div>
-        <div className=" w-full flex max-lg:flex-col max-lg:gap-6 justify-between">
-          <main className="flex flex-col gap-3">
-            <div className=" size-10 ring-1 ring-blue-500 rounded-md shadow-md shadow-blue-500/25 flex items-center justify-center">
-              <Shield className=" text-blue-500 size-7" />
-            </div>
-            <span className="text-blue-500 max-lg:text-sm font-medium uppercase">
-              Segurança e confiabilidade
-            </span>
-            <h3 className=" text-2xl lg:text-4xl  font-semibold">
-              Código Robusto e Escalável
-            </h3>
-            <p className="max-w-[450px] dark:text-zinc-300 text-zinc-500">
-              Desenvolvemos com as melhores práticas do mercado. Arquiteturas
-              modernas, código limpo e infraestrutura resiliente garantem que
-              seu software funcione sem dores de cabeça.
-            </p>
-          </main>
-          <aside>
-            <div key="quality" className="relative w-80  lg:w-[450px] h-64">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-blue-500/10 rounded-2xl border border-blue-500/20 backdrop-blur-sm">
-                <div className="p-4 font-mono text-sm">
-                  <div className="flex items-center gap-2 mb-3 pb-2 border-b border-zinc-800">
-                    <div className="w-3 h-3 rounded-full bg-red-500/60" />
-                    <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
-                    <div className="w-3 h-3 rounded-full bg-green-500/60" />
-                    <span className="text-zinc-500 text-xs ml-2">main.ts</span>
-                  </div>
-                  <div className="space-y-1 text-xs">
-                    <div>
-                      <span className="text-emerald-400">const</span>{' '}
-                      <span className="text-cyan-300">projeto</span>{' '}
-                      <span className="text-zinc-500">=</span>{' '}
-                      <span className="text-amber-300">{'{'}</span>
+
+                {/* Conteúdo */}
+                <div className="lg:w-1/2 lg:pl-12">
+                  <div className="bg-white ring-1 ring-blue-100 dark:bg-zinc-800 rounded-2xl p-8 border border-zinc-200 dark:border-zinc-700 shadow-sm transition-shadow">
+                    <div className="lg:hidden inline-flex p-3 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-lg shadow-blue-500/25 mb-4">
+                      <Rocket className="text-white size-6" />
                     </div>
-                    <div className="pl-4">
-                      <span className="text-zinc-400">qualidade:</span>{' '}
-                      <span className="text-emerald-300">{'"excelente"'}</span>
-                      <span className="text-zinc-500">,</span>
-                    </div>
-                    <div className="pl-4">
-                      <span className="text-zinc-400">testes:</span>{' '}
-                      <span className="text-emerald-300">100</span>
-                      <span className="text-zinc-500">,</span>
-                    </div>
-                    <div className="pl-4">
-                      <span className="text-zinc-400">cobertura:</span>{' '}
-                      <span className="text-emerald-300">{'"95%"'}</span>
-                      <span className="text-zinc-500">,</span>
-                    </div>
-                    <div className="pl-4">
-                      <span className="text-zinc-400">bugs:</span>{' '}
-                      <span className="text-emerald-300">0</span>
-                    </div>
-                    <div>
-                      <span className="text-amber-300">{'}'}</span>
-                      <span className="text-zinc-500">;</span>
-                    </div>
+
+                    <div className="flex items-start gap-3 mb-3"></div>
+
+                    <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-zinc-900 dark:text-white">
+                      Software Que Impulsiona Resultados
+                    </h3>
+
+                    <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                      Transformamos suas ideias em soluções digitais que geram
+                      valor real. Cada projeto é desenvolvido para escalar junto
+                      com seu negócio e entregar ROI mensurável.
+                    </p>
                   </div>
                 </div>
               </div>
-              <div className="absolute -top-4 -left-4 w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-300 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/20">
-                <Shield className="w-7 h-7 text-white" />
-              </div>
-            </div>
-          </aside>
-        </div>
-        <div className=" w-full flex max-lg:flex-col lg:flex-row-reverse gap-16">
-          <main className="flex flex-col gap-3">
-            <div className=" size-10 ring-1 ring-blue-500 rounded-md shadow-md shadow-blue-500/25 flex items-center justify-center">
-              <Rabbit className=" text-blue-500 size-7" />
-            </div>
-            <span className="text-blue-500 max-lg:text-sm  font-medium uppercase">
-              Time-to-market acelerado
-            </span>
-            <h3 className="text-2xl lg:text-4xl  font-semibold">
-              Do Conceito ao Deploy Rápido
-            </h3>
-            <p className="max-w-[450px] dark:text-zinc-300 text-zinc-500">
-              Metodologias ágeis e entregas incrementais para que você veja
-              resultados rapidamente. Validação contínua e iterações que
-              acompanham a evolução do seu negócio.
-            </p>
-          </main>
-          <aside>
-            <div className="relative w-80 lg:w-[450px] h-64">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-blue-400/10 rounded-2xl border border-blue-500/20 backdrop-blur-sm p-6">
-                <div className="flex items-center gap-2 mb-6">
-                  <Rocket className="w-5 h-5 text-blue-400" />
-                  <span className="text-blue-400 text-sm font-medium">
-                    Pipeline de Deploy
-                  </span>
-                </div>
-                <div className="space-y-4">
-                  {[
-                    { label: 'Build', status: 'done' },
-                    { label: 'Testes', status: 'done' },
-                    { label: 'Review', status: 'done' },
-                    { label: 'Deploy', status: 'active' },
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3">
-                      <div
-                        className={`w-6 h-6 rounded-full flex items-center justify-center ${
-                          item.status === 'done'
-                            ? 'bg-blue-500 text-white'
-                            : 'bg-blue-400 text-white animate-pulse'
-                        }`}
-                      >
-                        {item.status === 'done' ? '✓' : '●'}
-                      </div>
-                      <span
-                        className={`text-sm ${
-                          item.status === 'active'
-                            ? 'text-blue-400 font-medium'
-                            : 'text-zinc-400'
-                        }`}
-                      >
-                        {item.label}
-                      </span>
-                      {item.status === 'active' && (
-                        <span className="ml-auto text-xs text-blue-400 bg-blue-500/20 px-2 py-1 rounded-full">
-                          Em progresso
-                        </span>
-                      )}
+
+              <div className="relative flex flex-col lg:flex-row lg:items-center gap-6">
+                <div className="lg:w-1/2 lg:pr-12 lg:text-right">
+                  <div className="bg-white ring-1 ring-blue-100 dark:bg-zinc-800 rounded-2xl p-8 border border-zinc-200 dark:border-zinc-700 shadow-sm transition-shadow">
+                    <div className="lg:hidden inline-flex p-3 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-lg shadow-blue-500/25 mb-4">
+                      <Bot className="text-white size-6" />
                     </div>
-                  ))}
+
+                    <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-zinc-900 dark:text-white">
+                      Automatize e Otimize Processos
+                    </h3>
+
+                    <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                      Elimine tarefas manuais e reduza custos operacionais.
+                      Nossos sistemas são projetados para integrar com sua
+                      operação e aumentar a produtividade da sua equipe.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Ponto na timeline - desktop */}
+                <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 w-16 h-16 bg-white dark:bg-zinc-900 rounded-full border-4 border-blue-500 items-center justify-center shadow-lg shadow-blue-500/25 z-10">
+                  <Bot className="text-blue-500 size-7" />
+                </div>
+
+                {/* Espaçador direito - desktop */}
+                <div className="hidden lg:block lg:w-1/2" />
+              </div>
+
+              {/* Item 3 - Direita no desktop */}
+              <div className="relative flex flex-col lg:flex-row lg:items-center gap-6">
+                {/* Espaçador esquerdo - desktop */}
+                <div className="hidden lg:block lg:w-1/2" />
+
+                {/* Ponto na timeline - desktop */}
+                <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 w-16 h-16 bg-white dark:bg-zinc-900 rounded-full border-4 border-blue-500 items-center justify-center shadow-lg shadow-blue-500/25 z-10">
+                  <Shield className="text-blue-500 size-7" />
+                </div>
+
+                {/* Conteúdo */}
+                <div className="lg:w-1/2 lg:pl-12">
+                  <div className="bg-white ring-1 ring-blue-100 dark:bg-zinc-800 rounded-2xl p-8 border border-zinc-200 dark:border-zinc-700 shadow-sm transition-shadow">
+                    {/* Ícone mobile */}
+                    <div className="lg:hidden inline-flex p-3 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-lg shadow-blue-500/25 mb-4">
+                      <Shield className="text-white size-6" />
+                    </div>
+
+                    <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-zinc-900 dark:text-white">
+                      Código Robusto e Escalável
+                    </h3>
+
+                    <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                      Desenvolvemos com as melhores práticas do mercado.
+                      Arquiteturas modernas, código limpo e infraestrutura
+                      resiliente garantem que seu software funcione sem dores de
+                      cabeça.
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div className="absolute -bottom-4 -right-4 w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-300 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/20">
-                <Rocket className="w-7 h-7 text-white" />
+
+              {/* Item 4 - Esquerda no desktop */}
+              <div className="relative flex flex-col lg:flex-row lg:items-center gap-6">
+                {/* Conteúdo */}
+                <div className="lg:w-1/2 lg:pr-12 lg:text-right">
+                  <div className="bg-white ring-1 ring-blue-100 dark:bg-zinc-800 rounded-2xl p-8 border border-zinc-200 dark:border-zinc-700 shadow-sm transition-shadow">
+                    {/* Ícone mobile */}
+                    <div className="lg:hidden inline-flex p-3 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-lg shadow-blue-500/25 mb-4">
+                      <Rabbit className="text-white size-6" />
+                    </div>
+
+                    <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-zinc-900 dark:text-white">
+                      Do Conceito ao Deploy Rápido
+                    </h3>
+
+                    <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                      Metodologias ágeis e entregas incrementais para que você
+                      veja resultados rapidamente. Validação contínua e
+                      iterações que acompanham a evolução do seu negócio.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Ponto na timeline - desktop */}
+                <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 w-16 h-16 bg-white dark:bg-zinc-900 rounded-full border-4 border-blue-500 items-center justify-center shadow-lg shadow-blue-500/25 z-10">
+                  <Rabbit className="text-blue-500 size-7" />
+                </div>
+
+                {/* Espaçador direito - desktop */}
+                <div className="hidden lg:block lg:w-1/2" />
               </div>
             </div>
-          </aside>
+          </div>
         </div>
       </div>
     </div>

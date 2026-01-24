@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  font-family: 'Rubik', system-ui, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+--subtitle: rgba(0, 0, 0, 0.65);
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #FFFFFF;
@@ -17,6 +17,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --subtitle: rgba(0, 0, 0, 0.65);
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.141 0.005 285.823);
@@ -63,6 +64,7 @@
   --color-foreground: var(--foreground);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
+  --color-subtitle: var(--subtitle);
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
@@ -93,6 +95,7 @@
 }
 
 .dark {
+  --subtitle: rgba(255, 255, 255, 0.9);
   --background: oklch(0.27 0.008 265);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.21 0.006 285.885);

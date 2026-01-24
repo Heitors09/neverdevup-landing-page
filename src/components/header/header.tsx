@@ -31,7 +31,7 @@ const itemVariants = {
 export const Header = () => {
   return (
     <motion.header
-      className="flex items-center py-8 lg:px-[163px] justify-between px-6 lg:justify-center  gap-36"
+      className="flex items-center py-8 lg:px-[163px] justify-between px-6  gap-36"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -41,7 +41,7 @@ export const Header = () => {
       </motion.div>
 
       <motion.ul
-        className="flex text-zinc-500 dark:text-zinc-200  hidden lg:flex  gap-[34px]"
+        className="flex text-zinc-500 dark:text-zinc-200 pr-[30px]  hidden lg:flex  gap-[34px]"
         variants={itemVariants}
       >
         <li className="hover:text-black dark:hover:text-zinc-400 duration-200">

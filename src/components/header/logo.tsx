@@ -3,7 +3,7 @@ export const Logo = () => {
     <a href="#">
       <img
         className="hidden dark:hidden lg:block"
-        src={'/logo-blue.png'}
+        src={'/logo-black-mini.png'}
         alt="logo"
       />
       <img className="hidden dark:lg:block" src={'/logo-whit.png'} alt="logo" />
